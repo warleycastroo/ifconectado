@@ -1,0 +1,112 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Estilos para tornar os elementos clicáveis mudarem de cor */
+a, button {
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+    background-color: #33ef3c; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+header {
+    background-color: #e7e7e7;
+    color: rgb(75, 182, 26);
+    padding: 20px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #43ef33;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: none; /* Esconder todas as seções por padrão */
+}
+
+h2 {
+    color: #33ef3c;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #5fef33;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #49ef33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a {
+    color: #33ef3c;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#userProfile img {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    font-size: 20px;
+}
+
+.rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+}
+
+/* Estilos para tornar o site responsivo em telas menores */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* Tamanho de fonte menor para telas pequenas */
+    }
+}

@@ -1,0 +1,47 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Variáveis para todas as seções
+    const login = document.getElementById("login");
+    const campusSelection = document.getElementById("campusSelection");
+    const profileCreation = document.getElementById("profileCreation");
+    const feed = document.getElementById("feed");
+    const userProfile = document.getElementById("userProfile");
+    const publishForm = document.getElementById("publishForm");
+    const offerRideForm = document.getElementById("offerRideForm");
+    const requestRideForm = document.getElementById("requestRideForm");
+    const viewRidesForm = document.getElementById("viewRidesForm");
+
+    // Variáveis para elementos relacionados ao perfil
+    const userName = document.getElementById("userName");
+    const userCourse = document.getElementById("userCourse");
+    const userBio = document.getElementById("userBio");
+    const profileImage = document.getElementById("profileImage");
+
+    // Variáveis para avaliações e comentários
+    const driverRating = document.getElementById("driverRating");
+    const passengerRating = document.getElementById("passengerRating");
+    const driverRatingDisplay = document.getElementById("driverRatingDisplay");
+    const passengerRatingDisplay = document.getElementById("passengerRatingDisplay");
+    const driverComment = document.getElementById("driverComment");
+    const passengerComment = document.getElementById("passengerComment");
+    const driverCommentDisplay = document.getElementById("driverCommentDisplay");
+    const passengerCommentDisplay = document.getElementById("passengerCommentDisplay");
+
+    // Função para ocultar todas as seções
+    function hideAllScreens() {
+        login.style.display = "none";
+        campusSelection.style.display = "none";
+        profileCreation.style.display = "none";
+        feed.style.display = "none";
+        userProfile.style.display = "none";
+        publishForm.style.display = "none";
+        offerRideForm.style.display = "none";
+        requestRideForm.style.display = "none";
+        viewRidesForm.style.display = "none";
+    }
+
+    // Exibir a tela de login por padrão
+    hideAllScreens();
+    login.style.display = "block";
+
+    // Resto do seu JavaScript permanece inalterado.
+});

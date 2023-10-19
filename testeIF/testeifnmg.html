@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protótipo IFNMG Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Adicione esta linha -->
+<body>
+    <header>
+        <img src="1.png" alt="IFNMG Connect">
+        <h1>Bem-vindo ao IFNMG Connect</h1>
+    </header>
+
+    <section id="login">
+        <h2>Faça login ou cadastre-se</h2>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Seu e-mail institucional" />
+        <label for="password">Senha:</label>
+        <input type="password" id="password" placeholder="Sua senha" />
+        <button id="loginButton">Entrar</button>
+        <p>Ainda não tem uma conta? <a href="#">Crie uma aqui</a></p>
+    </section>
+
+    <section id="campusSelection">
+        <h2>Selecione seu campus</h2>
+        <label for="campusSelect">Selecione o seu campus:</label>
+        <select id="campusSelect">
+            <option value="Almenara">Almenara</option>
+            <option value="Araçuaí">Araçuaí</option>
+            <option value="Arinos">Arinos</option>
+            <option value="Januária">Januária</option>
+            <option value="Montes Claros">Montes Claros</option>
+            <option value="Pirapora">Pirapora</option>
+            <option value="Salinas">Salinas</option>
+        </select>
+        <button id="startButton">Iniciar</button>
+    </section>
+
+    <section id="profileCreation">
+        <h2>Crie seu perfil</h2>
+        <label for="fullName">Nome Completo:</label>
+        <input type="text" id="fullName" placeholder="Seu nome completo" />
+        <label for="course">Curso:</label>
+        <input type="text" id="course" placeholder="Seu curso" />
+        <label for="bio">Bio:</label>
+        <textarea id="bio" rows="4" placeholder="Escreva uma breve biografia"></textarea>
+        <label for="profilePicture">Foto de Perfil:</label>
+        <input type="file" id="profilePicture" accept="image/*" />
+        <button id="createProfileButton">Criar Perfil</button>
+    </section>
+
+    <section id="feed">
+        <h2>Feed do IFNMG Connect</h2>
+        <ul>
+            <li><a href="#" id="publishLink">Publicar</a></li>
+            <li><a href="#" id="offerRideLink">Oferecer Carona</a></li>
+            <li><a href="#" id="requestRideLink">Pedir Carona</a></li>
+            <li><a href="#" id="viewRidesLink">Ver Caronas Disponíveis</a></li>
+            <li><a href="#" id="eventsLink">Eventos do Campus</a></li>
+            <li><a href="#" id="edictsLink">Editais Publicados</a></li>
+            <li><a href="#" id="partiesLink">Festas do Campus/Calouradas</a></li>
+        </ul>
+
+        <!-- Tela de Publicar -->
+        <section id="publishForm">
+            <h2>Publicar</h2>
+            <label for="postContent">Conteúdo da Publicação:</label>
+            <textarea id="postContent" rows="4" placeholder="Escreva sua publicação"></textarea>
+            <label for="postMedia">Foto ou Vídeo (opcional):</label>
+            <input type="file" id="postMedia" accept="image/*, video/*" />
+            <button id="submitPostButton">Publicar</button>
+        </section>
+
+        <!-- Tela de Oferecer Carona -->
+        <section id="offerRideForm">
+            <h2>Oferecer Carona</h2>
+            <label for "destination">Destino:</label>
+            <input type="text" id="destination" placeholder="Informe o destino da carona" />
+            <label for="availableSeats">Vagas Disponíveis:</label>
+            <input type="number" id="availableSeats" placeholder="Quantas vagas estão disponíveis?" />
+            <label for="rideDetails">Detalhes da Carona:</label>
+            <textarea id="rideDetails" rows="4" placeholder="Informe os detalhes da carona"></textarea>
+            <label for="rideRating">Avalie o passageiro:</label>
+            <div class="rating" id="passengerRating">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
+            <label for="passengerComment">Comentário (opcional):</label>
+            <textarea id="passengerComment" rows="4" placeholder="Deixe um comentário (opcional)"></textarea>
+            <button id="submitOfferButton">Oferecer Carona</button>
+        </section>
+
+        <!-- Tela de Pedir Carona -->
+        <section id="requestRideForm">
+            <h2>Pedir Carona</h2>
+            <label for="rideDestination">Destino:</label>
+            <input type="text" id="rideDestination" placeholder="Informe seu destino" />
+            <label for="rideSeatsNeeded">Vagas Necessárias:</label>
+            <input type="number" id="rideSeatsNeeded" placeholder="Quantas vagas você precisa?" />
+            <label for="rideRequest">Pedido de Carona:</label>
+            <textarea id="rideRequest" rows="4" placeholder="Faça o seu pedido de carona"></textarea>
+            <label for="rideRating">Avalie o motorista:</label>
+            <div class="rating" id="driverRating">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
+            <label for="driverComment">Comentário (opcional):</label>
+            <textarea id="driverComment" rows="4" placeholder="Deixe um comentário (opcional)"></textarea>
+            <button id="submitRequestButton">Pedir Carona</button>
+        </section>
+
+        <section id="events">
+            <h2>Eventos do Campus</h2>
+            <ul>
+                <li><a href="#">Evento 1</a></li>
+                <li><a href="#">Evento 2</a></li>
+                <li><a href="#">Evento 3</a></li>
+            </ul>
+        </section>
+    
+        <section id="edicts">
+            <h2>Editais Publicados</h2>
+            <ul>
+                <li><a href="#">Edital 1</a></li>
+                <li><a href="#">Edital 2</a></li>
+                <li><a href="#">Edital 3</a></li>
+            </ul>
+        </section>
+    
+        <section id="parties">
+            <h2>Festas do Campus/Calouradas</h2>
+            <ul>
+                <li><a href="#">Festa 1</a></li>
+                <li><a href="#">Festa 2</a></li>
+                <li><a href="#">Festa 3</a></li>
+            </ul>
+        </section>
+
+        <!-- Tela de Ver Caronas Disponíveis -->
+        <section id="viewRidesForm">
+            <h2>Ver Caronas Disponíveis</h2>
+            <button id="viewRidesButton">Ver Caronas Disponíveis</button>
+        </section>
+
+        <!-- Exemplo de postagem no feed -->
+
+        <div class="feed-item"></div>
+    </section>
+
+    <section id="userProfile">
+        <h2>Seu Perfil</h2>
+        <img id="profileImage" src="#" alt="Foto de Perfil">
+        <h3 id="userName"></h3>
+        <p id="userCourse"></p>
+        <p id="userBio"></p>
+        <h3>Avaliações</h3>
+        <p>Avaliação como motorista: <span class="rating" id="driverRatingDisplay"></span></p>
+        <p>Comentário como motorista: <span id="driverCommentDisplay"></span></p>
+        <p>Avaliação como passageiro: <span class="rating" id="passengerRatingDisplay"></span></p>
+        <p>Comentário como passageiro: <span id="passengerCommentDisplay"></span></p>
+        <button id="accessFeaturesButton">Acessar Funcionalidades</button>
+    </section>
+
+    <script>
+        // Variáveis para todas as seções
+        const login = document.getElementById("login");
+        const campusSelection = document.getElementById("campusSelection");
+        const profileCreation = document.getElementById("profileCreation");
+        const feed = document.getElementById("feed");
+        const userProfile = document.getElementById("userProfile");
+        const publishForm = document.getElementById("publishForm");
+        const offerRideForm = document.getElementById("offerRideForm");
+        const requestRideForm = document.getElementById("requestRideForm");
+        const viewRidesForm = document.getElementById("viewRidesForm");
+
+        // Variáveis para elementos relacionados ao perfil
+        const userName = document.getElementById("userName");
+        const userCourse = document.getElementById("userCourse");
+        const userBio = document.getElementById("userBio");
+        const profileImage = document.getElementById("profileImage");
+
+        // Variáveis para avaliações e comentários
+        const driverRating = document.getElementById("driverRating");
+        const passengerRating = document.getElementById("passengerRating");
+        const driverRatingDisplay = document.getElementById("driverRatingDisplay");
+        const passengerRatingDisplay = document.getElementById("passengerRatingDisplay");
+        const driverComment = document.getElementById("driverComment");
+        const passengerComment = document.getElementById("passengerComment");
+        const driverCommentDisplay = document.getElementById("driverCommentDisplay");
+        const passengerCommentDisplay = document.getElementById("passengerCommentDisplay");
+
+        // Função para ocultar todas as seções
+        function hideAllScreens() {
+            login.style.display = "none";
+            campusSelection.style.display = "none";
+            profileCreation.style.display = "none";
+            feed.style.display = "none";
+            userProfile.style.display = "none";
+            publishForm.style.display = "none";
+            offerRideForm.style.display = "none";
+            requestRideForm.style.display = "none";
+            viewRidesForm.style.display = "none";
+        }
+
+        // Exibir a tela de login por padrão
+        hideAllScreens();
+        login.style.display = "block";
+
+        // Event listeners e ações para as seções
+        const loginButton = document.getElementById("loginButton");
+        loginButton.addEventListener("click", () => {
+            // Adicione lógica de autenticação aqui
+            // Exibição das próximas telas se o login for bem-sucedido
+            hideAllScreens();
+            campusSelection.style.display = "block";
+        });
+
+        const startButton = document.getElementById("startButton");
+        startButton.addEventListener("click", () => {
+            hideAllScreens();
+            profileCreation.style.display = "block";
+        });
+
+        const createProfileButton = document.getElementById("createProfileButton");
+        createProfileButton.addEventListener("click", () => {
+            // Processo de criação de perfil
+            const fullName = document.getElementById("fullName").value;
+            const course = document.getElementById("course").value;
+            const bio = document.getElementById("bio").value;
+            const profileImageFile = document.getElementById("profilePicture").files[0];
+
+            // Atualizar informações no perfil
+            userName.textContent = fullName;
+            userCourse.textContent = "Curso: " + course;
+            userBio.textContent = "Bio: " + bio;
+
+            // Mostrar a imagem de perfil, se fornecida
+            if (profileImageFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profileImage.src = e.target.result;
+                };
+                reader.readAsDataURL(profileImageFile);
+                profileImage.style.display = "block";
+            }
+
+            hideAllScreens();
+            userProfile.style.display = "block";
+        });
+
+        const accessFeaturesButton = document.getElementById("accessFeaturesButton");
+        accessFeaturesButton.addEventListener("click", () => {
+            // Ação quando o usuário deseja acessar as funcionalidades do site
+            hideAllScreens();
+            feed.style.display = "block";
+        });
+
+        // Event listeners para links de navegação
+        const publishLink = document.getElementById("publishLink");
+        publishLink.addEventListener("click", () => {
+            hideAllScreens();
+            publishForm.style.display = "block";
+        });
+
+        const offerRideLink = document.getElementById("offerRideLink");
+        offerRideLink.addEventListener("click", () => {
+            hideAllScreens();
+            offerRideForm.style.display = "block";
+        });
+
+        const requestRideLink = document.getElementById("requestRideLink");
+        requestRideLink.addEventListener("click", () => {
+            hideAllScreens();
+            requestRideForm.style.display = "block";
+        });
+
+        const viewRidesLink = document.getElementById("viewRidesLink");
+        viewRidesLink.addEventListener("click", () => {
+            hideAllScreens();
+            viewRidesForm.style.display = "block";
+        });
+
+        // Event listeners para ações nos botões
+        const submitPostButton = document.getElementById("submitPostButton");
+        submitPostButton.addEventListener("click", () => {
+            // Coletar os dados do formulário de postagem e implementar a lógica necessária.
+            alert("Publicação enviada com sucesso!");
+        });
+
+        const submitOfferButton = document.getElementById("submitOfferButton");
+        submitOfferButton.addEventListener("click", () => {
+            // Coletar os dados do formulário de oferta de carona e implementar a lógica necessária.
+            alert("Carona oferecida com sucesso!");
+        });
+
+        const submitRequestButton = document.getElementById("submitRequestButton");
+        submitRequestButton.addEventListener("click", () => {
+            // Coletar os dados do formulário de pedido de carona e implementar a lógica necessária.
+            alert("Carona pedida com sucesso!");
+        });
+
+        // Event listeners para avaliações de motorista e passageiro
+        driverRating.addEventListener("click", (event) => {
+            // Lógica para avaliar o motorista
+            const rating = event.target.childElementCount;
+            driverRatingDisplay.textContent = "Avaliação: " + rating + "/5";
+        });
+
+        passengerRating.addEventListener("click", (event) => {
+            // Lógica para avaliar o passageiro
+            const rating = event.target.childElementCount;
+            passengerRatingDisplay.textContent = "Avaliação: " + rating + "/5";
+        });
+    </script>
+</body>
+</html>
